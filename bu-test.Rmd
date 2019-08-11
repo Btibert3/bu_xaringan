@@ -1,0 +1,112 @@
+---
+title: "Xaringan"
+subtitle: "A theme for Boston University"
+author: "Brock Tibert"
+date: "2019-09-01"
+output:
+  xaringan::moon_reader:
+    css: ["default", "assets/bu-fonts.css", "assets/bu.css"]
+    self_contained: true # if true, fonts will be stored locally
+    seal: true # show a title slide with YAML information
+    includes:
+      in_header: "assets/mathjax-equation-numbers.html"
+    nature:
+      beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: '16:9' # alternatives '16:9' or '4:3' or others e.g. 13:9
+      navigation:
+        scroll: false # disable slide transitions by scrolling
+---
+
+## Installing `r icon::fa("download",pull = "right")`
+
+The **xaringan** package is on CRAN, but I recommend installing the development release from `r icon::fa("github")`
+
+```{r, eval = FALSE}
+devtools::install_github('yihui/xaringan')
+```
+
+.pull-left[
+You will also need two other CSS files for the custom University of Sydney styling:
+
+- `sydney-fonts.css`
+- `sydney.css`
+]
+.pull-right[
+If you want the University Logo to show up on the title slide, you'll also need
+
+- `USydLogo-black.svg`
+]
+
+These are available in the assets folder of the GitHub code repository [`r icon::fa("github")` `garthtarr/sydney_xaringan`](http://github.com/garthtarr/sydney_xaringan/assets)
+
+To make things easy to get started, I recommend downloading a copy of the `sydney_xaringan` repo [`r icon::fa("file-archive")`](https://github.com/garthtarr/sydney_xaringan/archive/master.zip) and make changes to the template. 
+
+---
+background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
+background-size: 250px
+background-position: 50% 75%
+
+
+---
+## About
+
+Pulling select slides from 
+
+- https://raw.githubusercontent.com/garthtarr/sydney_xaringan/master/index.Rmd
+
+Can walk along with the slide templates (see slide, look at code) below
+
+- https://garthtarr.github.io/sydney_xaringan/#4
+
+
+
+---
+## Why xaringan/remark.js? `r icon::fa("check-circle", pull = "right")`
+
+- Printing (in Google Chrome) is a lot more reliable for xaringan/remark.js
+- The customisation of the CSS and using it is a lot easier in xaringan/remark.js
+- You almost never need to write any manual HTML chunks (e.g. `<div style="text-align: center;"></div>`)
+- With remark.js' Markdown, you can add arbitrary CSS classes to elements using syntax `.className[elements]`, which is very handy compared to `<span class="className"></span>`
+- You can write slide notes under three question marks `???`. These notes are only displayed in the presentation mode, and only the speaker can see these notes. 
+- The keyboard shortcuts: press keys like `P` (presentation mode), `C` (clone slides to a new window, useful for presentation mode), `B` (black out), `M` (mirror the slide), and `H` (help), etc.
+
+More: [yihui.name/en/2017/08/why-xaringan-remark-js/](https://yihui.name/en/2017/08/why-xaringan-remark-js/)
+
+
+---
+## Content boxes `r icon::fa("box", pull = "right")`
+
+.content-box-blue[This is a `.content-box-blue[]` chunk.
+
+]
+
+
+
+
+
+--
+
+If you have just a few words, it only highlights the words:
+
+
+.content-box-red[`.content-box-red[]`] .content-box-gray[`.content-box-gray[]`]
+
+.content-box-blue[`.content-box-blue[]`] .content-box-purple[`.content-box-purple[]`]
+
+--
+
+> More colors = look at css for `content-box-<color>`
+
+If the text includes a new line character, you get a 100% width box.  I've used `.columns-2[]` it's 100% of the column width.
+
+.columns-2[
+.content-box-gray[
+`.content-box-gray[]`
+]
+.content-box-green[
+`.content-box-green[]`
+]
+]

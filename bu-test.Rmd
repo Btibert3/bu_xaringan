@@ -79,24 +79,21 @@ More: [yihui.name/en/2017/08/why-xaringan-remark-js/](https://yihui.name/en/2017
 ---
 ## Content boxes `r icon::fa("box", pull = "right")`
 
-.content-box-blue[This is a `.content-box-blue[]` chunk.
+.content-box-teal[This is a `.content-box-teal[]` chunk.
 
 ]
-
-
-
-
 
 --
 
 If you have just a few words, it only highlights the words:
 
 
-.content-box-red[`.content-box-red[]`] .content-box-gray[`.content-box-gray[]`]
+.content-box-red[`.content-box-red[]`] .content-box-darkred[`.content-box-darkred[]`]
 
-.content-box-blue[`.content-box-blue[]`] .content-box-purple[`.content-box-purple[]`]
+.content-box-teal[`.content-box-teal[]`] .content-box-purple[`.content-box-purple[]`]
 
 --
+
 
 > More colors = look at css for `content-box-<color>`
 
@@ -106,7 +103,61 @@ If the text includes a new line character, you get a 100% width box.  I've used 
 .content-box-gray[
 `.content-box-gray[]`
 ]
-.content-box-green[
-`.content-box-green[]`
+.content-box-yellow[
+`.content-box-yellow[]`
 ]
 ]
+
+
+---
+
+
+## Quotes `r icon::fa("quote-right", pull = "right")`
+
+.small[
+We can include **block quotes** using<br>
+`<blockquote>Quote goes here</blockquote>` 
+
+or<br>
+`> Quote goes here`
+
+or `.blockquote[Quote here]`
+]
+.pull-left[
+
+<blockquote>
+Statistics is the grammar of science. 
+.right[-- <cite>Karl Pearson</cite>]
+</blockquote>
+
+.blockquote[Quote]
+
+> Quote quote  
+]
+
+
+
+.pull-right[.small[
+```
+<blockquote>
+Statistics is the grammar of science. 
+.right[-- <cite>Karl Pearson</cite>]
+</blockquote>
+
+
+
+.blockquote[Quote]
+
+
+
+> Quote quote
+```
+
+]]
+
+
+
+
+
+
+

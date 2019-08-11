@@ -128,7 +128,7 @@ it from other content slides */
 
 /* link colour */
 a { 
-    color: #0148A4; 
+    color: #CC0000; 
 } 
 
 .columns-2 {
@@ -226,7 +226,9 @@ slides > slide {
 .content-box-army,
 .content-box-green,
 .content-box-purple,
+.content-box-teal,
 .content-box-red,
+.content-box-darkred,
 .content-box-yellow {
   box-sizing: border-box;
   border-radius: 15px;
@@ -238,10 +240,12 @@ slides > slide {
 .content-box-blue { background-color: #F0F8FF; }
 .content-box-gray { background-color: #e2e2e2; }
 .content-box-grey {	background-color: #F5F5F5; }
-.content-box-army {	background-color: #737a36; }
+.content-box-army {	background-color: #63C4AF; }
 .content-box-green { background-color: #d9edc2; }
 .content-box-purple { background-color: #e2e2f9; }
+.content-box-teal { background-color: #63C4AF; }
 .content-box-red { background-color: #CC0000; color: #ffffff; }
+.content-box-darkred { background-color: #A71930; color: #ffffff; }
 .content-box-yellow { background-color: #fef5c4; }
 .content-box-blue .remark-inline-code,
 .content-box-blue .remark-inline-code,
@@ -250,7 +254,9 @@ slides > slide {
 .content-box-army .remark-inline-code,
 .content-box-green .remark-inline-code,
 .content-box-purple .remark-inline-code,
+.content-box-purple .remark-inline-code,
 .content-box-red .remark-inline-code,
+.content-box-darkred .remark-inline-code,
 .content-box-yellow .remark-inline-code { 
   background: none;
 }
@@ -418,13 +424,13 @@ blockquote, .blockquote {
   margin-bottom: 0.2em;
   margin-left: 5px;
   margin-right: 5px;
-  border-left: solid 10px #0148A4;
-  border-top: solid 2px #0148A4;
-  border-bottom: solid 2px #0148A4;
-  border-right: solid 2px #0148A4;
+  border-left: solid 10px #a71930;
+  border-top: solid 2px #a71930;
+  border-bottom: solid 2px #a71930;
+  border-right: solid 2px #a71930;
   box-shadow: 0 0 6px rgba(0,0,0,0.5);
   /* background-color: #CC0000; */
-  color: #CC0000;
+  color: #a71930;
   padding: 0.5em;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;

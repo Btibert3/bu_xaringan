@@ -385,4 +385,37 @@ Assuming `image.jpg` is in the same folder as your `.Rmd` file, the code is:
 ```
 
 
+---
+class: center, middle
+
+# Text adjustments
+
+It is also possible to change the .blue[color] of any text by using `.color[text here]`
+
+--
+
+For example `.grey[grey]` will make text .grey[grey].
+
+--
+
+We can do this with white, .bu-red[BU master brand red], .bu-teal[BU master brand teal], .,bu-dark-red[BU master brand dark red], .brand-charcoal[Sydney master brand charcoal], .brand-grey[Sydney master brand grey], .black[black], .red[red], .blue[blue], .green[green], .yellow[yellow], .orange[orange], .purple[purple], .grey[grey].
+
+--
+
+To make text stand out we can use standard markdown `**text**` like **this** 
+or `.bold[this]` .bold[this].  Or italics using `_italic_` _italic_.
+
+You can string together these formats, e.g. `.blue[.bold[...]]` 
+to get .blue[.bold[blue and bold text]].
+
+--
+
+.left[.footnote[The text on this slide is centered and in the middle of the slide because the slide began with:
+```
+---
+class: center, middle
+```
+
+]]
+
 

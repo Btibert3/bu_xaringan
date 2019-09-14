@@ -248,3 +248,135 @@ plot(rnorm(100))
 ```
 
 ]
+
+
+---
+background-image: url("https://hpc.nih.gov/images/rstudio_ide.png")
+background-size: contain
+
+
+
+---
+
+# Slide with Footer
+
+- This is an item
+- This is another item.fn[1]
+- This is another item
+
+We can build footnotes in two different ways but note the `.footnote[]` at the end of a slide.
+
+.footnote[
+[1] Footnotes are not automatic.  In the text use `<sup>1</sup>` or `.fn[1]`
+
+[2] At the end of the slide `.footnote[[1] Text associated with footnote 1.]`
+]
+
+
+---
+
+# We can nest pull-* for multiple columns and break up slides
+
+.pull-left[
+
+.pull-left[
+- item 1 col 1
+- item 2 col 2
+]
+
+.pull-right[
+- item1 col 2
+- item 2 col 2
+]
+
+]
+
+.pull-right[
+- item 1 col 3
+- item 2 col 3
+]
+
+--- 
+
+`.pull-*` always is half the slide, so we are just dividing up the slide
+
+<br>
+
+> The horizontal line is because `--- ` has a space after it, not a `return`
+
+
+---
+
+# Help on customization
+
+[Syndey Theme Drives this](https://garthtarr.github.io/sydney_xaringan/#45)
+
+
+---
+
+# Break down a function and tutorial
+
+```{r eval=FALSE}
+x = sample(
+           x = letters,
+           size = 10,
+           replace = FALSE
+           )
+```
+
+--- 
+
+
+---
+# Break down a function and tutorial
+
+
+```{r eval=FALSE}
+x = sample(
+         {{ x = letters, }}
+           size = 10,
+           replace = FALSE
+           )
+```
+
+--- 
+
+- `x` = the object we are going to sample from.  In this case, the built in `letters` dataset
+
+
+---
+# Break down a function and tutorial
+
+
+```{r eval=FALSE}
+x = sample(
+           x = letters, 
+         {{ size = 10, }}
+           replace = FALSE
+           )
+```
+
+--- 
+
+- `size` = how many samples that we want to draw from `x`
+
+
+---
+# Break down a function and tutorial
+
+
+```{r eval=FALSE}
+x = sample(
+           x = letters, 
+           size = 10, 
+         {{ replace = FALSE }}
+           )
+```
+
+--- 
+
+- `replace` = should the element drawn from `x` be replaced so that can it be selected in another draw?
+
+--
+
+- Above if `size` was larger than 26, we would have to use `replace=TRUE` to ensure that we have > 0 elements to draw from

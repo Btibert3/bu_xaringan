@@ -86,9 +86,8 @@ To specify the margin of the first title h1
 .segue {
   text-align:center;
   vertical-align: middle;
-  background-color: #0148A4;
+  background-color: #78909c;
   color: #ffffff;
-  text-shadow: 0 0 20px #333;
 }
 .segue .remark-slide-number {
   display: none;
@@ -110,11 +109,13 @@ To specify the margin of the first title h1
   vertical-align: middle;
   background-color: #FFB800;
   color: #424242;
-  text-shadow: 0 0 2px #333;
+  /*text-shadow: 0 0 2px #333; */
 }
 .segue-yellow .remark-slide-number {
   display: none;
 }
+
+
 
 /* example slide with background colour to distinguish
 it from other content slides */

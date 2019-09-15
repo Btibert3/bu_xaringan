@@ -217,6 +217,8 @@ for (i in j) {
 
 .content-box-yellow[things that we want to call out in a `.content-box-*` but in yellow]
 
+For more info on content boxes, [review this slide](https://github.com/garthtarr/sydney_xaringan/blob/master/index.Rmd#L112)
+
 ---
 
 ## Another example

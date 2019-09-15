@@ -309,7 +309,9 @@ We can build footnotes in two different ways but note the `.footnote[]` at the e
 
 # Help on customization
 
-[Syndey Theme Drives this](https://garthtarr.github.io/sydney_xaringan/#45)
+- [Syndey Theme Drives this](https://garthtarr.github.io/sydney_xaringan/#45)
+ 
+- [Xaringan Offline](https://slides.yihui.name/xaringan/#33)
 
 
 ---
@@ -380,3 +382,81 @@ x = sample(
 --
 
 - Above if `size` was larger than 26, we would have to use `replace=TRUE` to ensure that we have > 0 elements to draw from
+
+
+---
+
+## A different way to highlight
+
+Use the `#<<` after a line (with some space)
+
+For example:
+
+```r
+library(ggplot2)
+ggplot(mtcars) + 
+  aes(mpg, disp) + 
+  geom_point() +   #<<
+  geom_smooth()    #<<
+
+```
+
+will render
+
+```{r tidy=FALSE, eval=FALSE}
+library(ggplot2)
+ggplot(mtcars) + 
+  aes(mpg, disp) + 
+  geom_point() +   #<<
+  geom_smooth()    #<<
+```
+
+
+---
+
+# Highlight rows of data
+
+```{r, highlight.output=c(3, 5), echo=FALSE, comment=NA}
+head(iris)
+```
+
+> Note the use of `highlight.output` in the code chunk but row 1 is the header row, not the first row of data
+
+
+
+
+
+---
+class: center, middle
+
+# We can use classes to shape our slides with the basics
+
+.pull-left[
+some text on the left
+]
+
+.pull-right[
+`r icon::fa("download")`
+
+]
+
+--- 
+
+<br>
+
+For more on use of the icon package, see the syndey code.
+
+
+---
+
+
+
+
+
+
+
+
+
+
+
+

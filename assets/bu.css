@@ -15,7 +15,7 @@ To specify the margin of the first title h1
   margin-bottom: 10px;
 }
 .remark-slide-content > h2:first-of-type {
-  color: #CC0000;
+  color:  #A71930;
   margin-top: 5px;
   margin-bottom: 10px;
 }
@@ -31,6 +31,7 @@ To specify the margin of the first title h1
 
 /*************************
   Custom classes 
+  Courtesy of https://github.com/garthtarr/sydney_xaringan
 **************************/
 
 .pull-left-2 {
@@ -58,30 +59,77 @@ To specify the margin of the first title h1
   bottom: 50px;
 }
 
-/* Change default inverse background colour */
-.inverse {
-  background-color: #CC0000;
-  text-shadow: 0 0 20px #333;
-}
+
 .inverse .remark-slide-number {
   display: none;
 }
-/* background colour classes */
-.sydney-blue {
-  background-color: #0148A4;
-  color: white;
-}
-.sydney-yellow {
-  background-color: #FFB800;
-}
-.sydney-red {
-  background-color: #CC0000;
-  color: white;
-}
+
+
+/* Questrom background color classes */
+
 .bu-red {
-  background-color: #CC0000;
+  background-color: #A71930;
   color: white;
 }
+.qst-red {
+  background-color: #A71930;
+  color: white;
+}
+.qst-teal {
+  background-color: #63C4AF ;
+  color: white;
+}
+.qst-black {
+  background-color: #000000 ;
+  color: white;
+}
+.qst-white {
+  background-color: #FFFFFF ;
+  color: black;
+}
+.qst-blue-bright {
+  background-color: #009FDA;
+  color: white;
+}
+.qst-blue-dark {
+  background-color: #005293;
+}
+.qst-cherry-bright {
+  background-color:  #CA005D;
+  color: white;
+}
+.qst-cherry-dark {
+  background-color:  #91004B;
+  color: white;
+}
+.qst-grey-bright {
+  background-color:  #AEA79F;
+  color: white;
+}
+.qst-grey-dark {
+  background-color:  #766A62;
+  color: white;
+}
+.qst-green-bright {
+  background-color:  #69BE28;
+  color: white;
+}
+.qst-green-dark {
+  background-color:  #427730;
+  color: white;
+}
+.qst-orange-bright {
+  background-color:  #FF7900;
+  color: white;
+}
+.qst-orange-dark {
+  background-color:  #DD4814;
+  color: white;
+}
+
+
+/* Questrom segue slides */
+
 /* segue */
 .segue {
   text-align:center;
@@ -96,22 +144,22 @@ To specify the margin of the first title h1
 .segue-red {
   text-align:center;
   vertical-align: middle;
-  background-color: #CC0000;
+  background-color:#A71930;
   color: #ffffff;
-  text-shadow: 0 0 20px #333;
+  /* text-shadow: 0 0 20px #333; */
 }
 .segue-red .remark-slide-number {
   display: none;
 }
 
-.segue-yellow {
+.segue-teal {
   text-align:center;
   vertical-align: middle;
-  background-color: #FFB800;
-  color: #424242;
+  background-color: #63C4AF;
+  color: #ffffff;
   /*text-shadow: 0 0 2px #333; */
 }
-.segue-yellow .remark-slide-number {
+.segue-teal .remark-slide-number {
   display: none;
 }
 
@@ -123,13 +171,14 @@ it from other content slides */
   background-color: #F1F1F1;
   /* rgb(231, 238, 242); */
 }
+
 .eg.nobackground {
   background-color:white;
 }
 
 /* link colour */
 a { 
-    color: #CC0000; 
+    color: #A71930; 
 } 
 
 .columns-2 {
@@ -212,7 +261,7 @@ slides > slide {
   padding: 2px;
 }
 
-
+  
 
 /******************
  * Coloured content boxes
@@ -246,7 +295,7 @@ slides > slide {
 .content-box-purple { background-color: #e2e2f9; }
 .content-box-teal { background-color: #63C4AF; }
 .content-box-red { background-color: #CC0000; color: #ffffff; }
-.content-box-darkred { background-color: #A71930; color: #ffffff; }
+.content-box-darkred { background-color:#A71930; color: #ffffff; }
 .content-box-yellow { background-color: #fef5c4; }
 .content-box-blue .remark-inline-code,
 .content-box-blue .remark-inline-code,
@@ -330,8 +379,8 @@ slides > slide {
     text-shadow: none;
   }
   .inverse h1, .inverse h2, .inverse h3, .inverse h4, .inverse h5, .segue {
-    background-color: transparent;
-    color: black;
+    /* background-color: transparent; */
+    color: white;
     text-shadow: none;
   }
   .eg {
@@ -360,7 +409,7 @@ slides > slide {
   /*
   background-position: 10% 90%, 100% 50%;
   background-size: 160px, 50% 100%;
-  background-color: #CC0000;
+  background-color: #A71930;
   /*padding-left: 100px;   delete this for 4:3 aspect ratio */
 /*
 }
@@ -368,7 +417,6 @@ slides > slide {
  
 .title-slide {
   background-image: url(BU_Questrom-Large.png);
-  /* background-image: url(https://sydney.edu.au/etc/designs/corporate-commons/bower_components/corporate-frontend/dist/assets/img/USydLogo.svg); */
   background-position: 7% 90%;
   background-size: 160px;
   background-color: #ffffff;
@@ -381,7 +429,7 @@ slides > slide {
 
 /* H1 fonts  */
 .title-slide h1 {
-  color: #CC0000;
+  color: #A71930;
   font-weight: normal;
   font-size: 45px;
   padding: 20px;
@@ -425,12 +473,12 @@ blockquote, .blockquote {
   margin-bottom: 0.2em;
   margin-left: 5px;
   margin-right: 5px;
-  border-left: solid 10px #a71930;
-  border-top: solid 2px #a71930;
-  border-bottom: solid 2px #a71930;
-  border-right: solid 2px #a71930;
+  border-left: solid 10px #A71930;
+  border-top: solid 2px #A71930;
+  border-bottom: solid 2px #A71930;
+  border-right: solid 2px #A71930;
   box-shadow: 0 0 6px rgba(0,0,0,0.5);
-  /* background-color: #CC0000; */
+  /* background-color:  #A71930; */
   color: #a71930;
   padding: 0.5em;
   -moz-border-radius: 5px;
@@ -479,7 +527,7 @@ Masterbrand charcoal #424242;
 C=0 M=0 Y=0 K=90 
 R=66 G=66 B=66 
 
-Masterbrand red #CC0000;
+Masterbrand red  #A71930;
 C=0 M=0 Y=0 K=90
 R=66 G=66 B=66 
 

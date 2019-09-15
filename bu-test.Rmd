@@ -56,23 +56,6 @@ background-image: url("assets/zoom-logo.png")
 
 
 class: title-slide
-background-image: url("assets/BU_Questrom.png"), url("assets/title-image1.jpg")
-background-position: 7% 90%, 100% 50%
-background-size: 160px, 50% 100%
-background-color: #fffff
-
-
-# .text-shadow[.red[Basic Example]]
-
-## .black[Subtitle]
-
-### .black[Author]
-
-### .black[Date]
-
-
----
-class: title-slide
 background-image: url("assets/BU_Questrom.png"), url("assets/bu-grey-bg.png")
 background-position: 7% 90%, 100% 50%
 background-size: 160px, 50% 100%
@@ -162,9 +145,9 @@ class: segue-red
 
 
 ---
-class: segue-yellow
+class: segue-teal
 
-.font180[Seque yellow]
+.font180[Seque teal]
 
 
 ---
@@ -450,7 +433,11 @@ For more on use of the icon package, see the syndey code.
 ---
 
 
+# ToDO
 
+- review both css files to put all special callouts on-brand for QST
+
+> https://cdn.questromworld.bu.edu/marcom/files/2015/08/BU_Brand-Guidelines_Questrom.pdf
 
 
 

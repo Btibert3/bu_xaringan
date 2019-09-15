@@ -1,8 +1,8 @@
 ---
-title: "Association Rules Mining"
-subtitle: "Module 1"
+title: "Slide Templates"
+subtitle: "For review"
 author: "Brock Tibert"
-date: October 21st, 2019
+date: 2019
 output:
   xaringan::moon_reader:
     css: ["default", "assets/bu-fonts.css", "assets/bu.css"]
@@ -168,6 +168,7 @@ plot(rnorm(100))
 ]
 
 
+
 ---
 
 # Data table 1
@@ -204,6 +205,17 @@ for (i in j) {
 }
 ```
 
+--- 
+
+<br>
+
+.content-box-teal[things that we want to call out in a `.content-box-*` but in teal]
+
+.content-box-red[things that we want to call out in a `.content-box-*` but in red]
+
+.content-box-darkred[things that we want to call out in a `.content-box-*` but in darkred]
+
+.content-box-yellow[things that we want to call out in a `.content-box-*` but in yellow]
 
 ---
 
@@ -428,6 +440,12 @@ some text on the left
 <br>
 
 For more on use of the icon package, see the syndey code.
+
+
+
+
+
+
 
 
 ---

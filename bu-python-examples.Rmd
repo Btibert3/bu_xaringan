@@ -1,0 +1,458 @@
+---
+title: "Slide Templates via Python"
+subtitle: "For review"
+author: "Brock Tibert"
+date: 2020
+output:
+  xaringan::moon_reader:
+    css: ["default", "assets/bu-fonts.css", "assets/bu.css"]
+    self_contained: true # if true, fonts will be stored locally
+    seal: true # show a title slide with YAML information
+    includes:
+      in_header: "assets/mathjax-equation-numbers.html"
+    nature:
+      beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: '16:9' # alternatives '16:9' or '4:3' or others e.g. 13:9
+      navigation:
+        scroll: false # disable slide transitions by scrolling
+---
+
+```{python setup, include=FALSE}
+
+## knitr options
+# knitr::opts_chunk$set(comment = NA)
+# knitr::opts_chunk$set(warning = FALSE)
+# knitr::opts_chunk$set(message = FALSE)
+# knitr::opts_chunk$set(echo = FALSE)
+
+## load the packages
+import pandas as pd
+import numpy as np
+import seaborn as sns
+
+
+
+```
+
+background-image: url("assets/coursekey-logo.png")
+
+
+---
+background-image: url("assets/coursekey-logo.png")
+background-position: 50% 90%
+
+## CourseKey
+
+- CourseID to login via our smartphones
+- Sound plays over the speaker
+- Used to check into class .brand-teal[__and labs__]
+
+---
+background-image: url("assets/zoom-logo.png")
+
+---
+
+
+class: title-slide
+background-image: url("assets/BU_Questrom.png"), url("assets/bu-grey-bg.png")
+background-position: 7% 90%, 100% 50%
+background-size: 160px, 50% 100%
+background-color: #fffff
+
+
+# .red[BU Example]
+
+## .black[Subtitle]
+
+### .black[Author]
+
+### .black[Date]
+
+---
+class: title-slide
+background-image: url("assets/BU_Questrom.png"), url("assets/bu-grey-bg.png")
+background-position: 7% 90%, 0% 50%
+background-size: 160px, 50% 100%
+background-color: #fffff
+
+.pull-right[
+# .red[BU Example Inverted]
+
+## .black[Subtitle]
+
+### .black[Author]
+
+### .black[Date]
+]
+
+
+---
+
+# A basic slide 1- column slide
+
+- Item 1
+- Item 2
+- Item 3
+  - A nested item
+- Another item
+
+- __A bolded item__
+
+- Something _italicized_
+
+- This has .brand-red[text here]
+
+> REMEMBER:  `xaringan::infinite_moon_reader()` to help render live and build deck
+
+
+
+
+---
+
+
+# An incremental slide
+
+### 1.  Point one
+
+--
+
+### 2.  Point two
+
+--
+
+### 3.  .brand-red[Point __three__]
+
+
+---
+class: middle, center
+
+
+.font200[Here is a section slide with larger font @ `.font200[xxx]`]
+
+
+---
+class: segue
+
+.font180[Here is some text with a seque slide]
+
+
+---
+class: segue-red
+
+.font180[Seque red]
+
+
+---
+class: segue-teal
+
+.font180[Seque teal]
+
+
+---
+
+.pull-left[
+
+- List item on the left
+- List item on below that
+- incremental item
+]
+
+.pull-right[
+
+```{python}
+sns.barplot(x=np.random.randn(15))
+```
+
+]
+
+
+
+---
+
+# Data table 1
+
+```{python echo=FALSE}
+np.random.randn(5)
+```
+
+
+---
+
+# Datatable 2
+
+```{python echo=FALSE}
+pd.DataFrame(np.random.rand(5, 3))
+```
+
+
+
+---
+
+
+## Here is R code snippet with line and highlight
+
+--- 
+
+```{python eval=FALSE}
+for i in range(5):
+  print(i**2)
+```
+
+--- 
+
+<br>
+
+.content-box-teal[things that we want to call out in a `.content-box-*` but in teal]
+
+.content-box-red[things that we want to call out in a `.content-box-*` but in red]
+
+.content-box-darkred[things that we want to call out in a `.content-box-*` but in darkred]
+
+.content-box-yellow[things that we want to call out in a `.content-box-*` but in yellow]
+
+For more info on content boxes, [review this slide](https://github.com/garthtarr/sydney_xaringan/blob/master/index.Rmd#L112)
+
+---
+
+## Another example
+
+.pull-left[
+
+```{python eval=FALSE}
+for i in range(4):
+  print(i)
+```
+]
+
+.pull-right[
+
+1. Item 1
+1. Item 2
+1. __Item 3__ bolded
+
+Below the image is adjusted in the `R` snippet
+
+```{r echo=FALSE, out.height="400px"}
+sns.scatterplot(x=np.random.rand(5), y=np.random.rand(5))
+```
+
+]
+
+
+---
+background-image: url("https://hpc.nih.gov/images/rstudio_ide.png")
+background-size: contain
+
+
+
+---
+
+# Slide with Footer
+
+- This is an item
+- This is another item.fn[1]
+- This is another item
+
+We can build footnotes in two different ways but note the `.footnote[]` at the end of a slide.
+
+.footnote[
+[1] Footnotes are not automatic.  In the text use `<sup>1</sup>` or `.fn[1]`
+
+[2] At the end of the slide `.footnote[[1] Text associated with footnote 1.]`
+]
+
+
+---
+
+# We can nest pull-* for multiple columns and break up slides
+
+.pull-left[
+
+.pull-left[
+- item 1 col 1
+- item 2 col 2
+]
+
+.pull-right[
+- item1 col 2
+- item 2 col 2
+]
+
+]
+
+.pull-right[
+- item 1 col 3
+- item 2 col 3
+]
+
+--- 
+
+`.pull-*` always is half the slide, so we are just dividing up the slide
+
+<br>
+
+> The horizontal line is because `--- ` has a space after it, not a `return`
+
+
+---
+
+# Help on customization
+
+- [Syndey Theme Drives this](https://garthtarr.github.io/sydney_xaringan/#45)
+ 
+- [Xaringan Offline](https://slides.yihui.name/xaringan/#33)
+
+
+---
+
+# Break down a function and tutorial
+
+```{python eval=FALSE}
+def testamp(x,y):
+  x = int(x)
+  y = int(y)
+  return x + y
+```
+
+--- 
+
+
+---
+# Break down a function and tutorial
+
+
+```{python eval=FALSE}
+def testamp(x,y):
+  {{ x = int(x) }}
+  y = int(y)
+  return x + y
+```
+
+--- 
+
+- we are changing x to an integer
+
+
+---
+# Break down a function and tutorial
+
+
+```{python eval=FALSE}
+
+def testamp(x,y):
+  x = int(x) 
+  {{ y = int(y) }}
+  return x + y
+```
+
+--- 
+
+- y is converted to an integer
+
+
+---
+# Break down a function and tutorial
+
+
+```{r eval=FALSE}
+
+def testamp(x,y):
+  x = int(x) 
+  y = int(y) 
+  {{ return x + y }}
+```
+
+--- 
+
+- finally return the data
+
+--
+
+- Another comment
+
+
+---
+
+## A different way to highlight
+
+Use the `#<<` after a line (with some space)
+
+For example:
+
+```python
+for _ in range(10):
+  # this is a comment
+  print "hello world"
+```
+
+will render
+
+```{python tidy=FALSE, eval=FALSE}
+
+for _ in range(10):
+  # this is a comment
+  print "hello world"     #<<
+```
+
+
+---
+
+# Highlight rows of data
+
+```{r, highlight.output=c(3, 5), echo=TRUE, comment=NA, eval=FALSE}
+head(iris)
+```
+
+> Note the use of `highlight.output` in the code chunk but row 1 is the header row, not the first row of data, but may not work with python
+
+
+
+
+
+---
+class: center, middle
+
+# We can use classes to shape our slides with the basics
+
+.pull-left[
+some text on the left
+]
+
+.pull-right[
+more text
+
+]
+
+--- 
+
+<br>
+
+For more on use of the icon package, see the syndey code.
+
+
+
+
+
+
+
+
+---
+
+
+# ToDO
+
+- review both css files to put all special callouts on-brand for QST
+
+> https://cdn.questromworld.bu.edu/marcom/files/2015/08/BU_Brand-Guidelines_Questrom.pdf
+
+
+
+
+
+
+
+
+
